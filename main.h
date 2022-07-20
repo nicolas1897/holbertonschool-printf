@@ -14,7 +14,7 @@
  */
 typedef struct ft
 {
-	char format;
+	char *form;
 	int (*f)(va_list);
 } formattype;
 
