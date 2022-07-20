@@ -13,16 +13,34 @@ int analyzer(const char *format, format_list, va_list arg)
 	{
 		if (format[i] == '%')
 		{              
-			for (j = 0; format_list[j].form; j++)
+			for (j = 0; format_list[j].form != NULL; j++)
 			{
-				if(format[i + 1] == format_list[j].form)
+				if (format[i + 1] == format_list[j].form)
 				{
-					format_list[j].f(arg);
+					answ = format_list[j].f(arg);
+					if (answ == -1)
+						return (EXIT_FAILURE);
+					cont += answ;
 					break;
-				}                                      
+				}
 			}
-		}                                                  
-		else                                               
-			_putchar(format[i]);                             
+			if (format_list[j].format == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					cont = cont + 2;
+				}
+				else
+					return (EXIT_FAILURE);
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			cont++;
+		}
 	}
+	return (cont);
 }
