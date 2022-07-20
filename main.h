@@ -8,10 +8,9 @@
 #include <stdarg.h>
 
 /**
- *struct
- *
- *
- *
+ *struct ft - _printf struct
+ *@format: oparator 
+ *@f: function format
  */
 typedef struct ft
 {
