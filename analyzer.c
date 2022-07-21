@@ -18,7 +18,7 @@ int analyzer(const char *format, format_type format_list, va_list arg)
 		{
 			for (j = 0; format_list[j].form != NULL; j++)/* iterate inside structure all the options of the pointer form */
 			{
-				if (format[i + 1] == format_list[j].form)/* if argument after symbol is equal to option */
+				if (format[i + 1] == format_list[j].form[0])/* if argument after symbol is equal to option */
 				{
 					answ = format_list[j].f(arg);/* call the required function */
 					if (answ == -1)
