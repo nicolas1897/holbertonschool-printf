@@ -1,13 +1,13 @@
 #include "main.h"
  
  /**
- *print_c - print character
- *@arg: argument list
  *
- *Return: always 1
+ *
+ *
+ *
  */
-int print_mod(va_list arg)
+int print_mod.c(va_list arg)
 {
-	_putchar(va_arg(arg, int));
-	return (1);
+  _putchar(‘%’);
+  return (1);
 }
