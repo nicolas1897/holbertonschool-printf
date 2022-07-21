@@ -8,6 +8,6 @@
  */
 int print_mod.c(__attribute__((unused))va_list arg)
 {
-  _putchar(‘%’);
+  _putchar('%');
   return (1);
 }
