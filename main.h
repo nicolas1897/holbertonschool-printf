@@ -9,7 +9,7 @@
 
 /**
  *struct ft - _printf struct
- *@format: oparator 
+ *@format: oparatr
  *@f: function format
  */
 typedef struct ft
