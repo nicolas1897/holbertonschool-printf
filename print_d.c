@@ -14,7 +14,7 @@ int print_d(va_list arg)
 
 	if (i < 0)
 	{
-		p += _putchar("-");
+		p += _putchar('-');
 		n = i * -1;
 	}
 	else
@@ -30,7 +30,3 @@ int print_d(va_list arg)
 	}
 	return (p);
 }
-
-}
-
-
