@@ -38,7 +38,7 @@ int analyzer(const char *format, format_type format_list[], va_list arg)
 				else
 					return (EXIT_FAILURE);
 			}
-			i++;
+			i++; /* increase after the special character, avoid printing */
 		}
 		else
 		{
