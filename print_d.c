@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *print_c - print character
+ *print_d - print character
  *@arg: argument list
  *
  *Return: always 1
