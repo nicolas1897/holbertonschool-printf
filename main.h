@@ -25,7 +25,7 @@ int print_s(va_list arg);
 int print_mod(va_list arg);
 int print_d(va_list arg);
 int print_i(va_list arg);
-int _putchar(char c);
+int _putchar(char);
 int analyzer(const char *format, format_type format_list[], va_list arg);
 
 #endif /* _MAIN_H_ */

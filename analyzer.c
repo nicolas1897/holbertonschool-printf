@@ -38,6 +38,7 @@ int analyzer(const char *format, format_type format_list[], va_list arg)
 				else
 					return (EXIT_FAILURE);
 			}
+			i++;
 		}
 		else
 		{
