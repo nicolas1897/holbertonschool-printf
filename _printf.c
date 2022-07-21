@@ -12,18 +12,18 @@ int _printf(const char *format, ...)
 
 	format_type format_list[] = {
 		{"c", print_c},
-		{"s", print_s},     
+		{"s", print_s},
 		{"%", print_mod},
 		{"d", print_d},
 		{"i", print_i},
-		{NULL, NULL}   
+		{NULL, NULL}
 		};
-  
-if (format == NULL)    
-	return(EXIT_FAILURE);
 
-      va_start(arg, format);
-      cont = analyzer(format, format_list, arg);
-      va_end(arg);
-      return(cont);
+	if (format == NULL)
+		return (EXIT_FAILURE);
+
+	va_start(arg, format);
+	cont = analyzer(format, format_list, arg);
+	va_end(arg);
+	return (cont);
 }

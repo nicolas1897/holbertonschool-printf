@@ -11,34 +11,34 @@
 int analyzer(const char *format, format_type format_list[], va_list arg)
 {
 	int i = 0, j = 0, cont = 0, answ = 0;
-
-	for (i = 0; format[i] != '\0'; i++)/* iterate through the arguments in printf */
-	{
-		if (format[i] == '%')/* identify the percentage symbol "%" */
-		{
-			for (j = 0; format_list[j].form != NULL; j++)/* iterate inside structure all the options of the pointer form */
-			{
-				if (format[i + 1] == format_list[j].form[0])/* if argument after symbol is equal to option */
-				{
-					answ = format_list[j].f(arg);/* call the required function */
+	/* iterate through the arguments in printf */
+	for (i = 0; format[i] != '\0'; i++)
+	{/* identify the percentage symbol "%" */
+		if (format[i] == '%')
+		{/* iterate inside structure all the options of the pointer form */
+			for (j = 0; format_list[j].form != NULL; j++)
+			{/* if argument after symbol is equal to option */
+				if (format[i + 1] == format_list[j].form[0])
+				{/* call the required function */
+					answ = format_list[j].f(arg);
 					if (answ == -1)
 						return (EXIT_FAILURE);
 					cont += answ;
 					break;
 				}
-			}
-			if (format_list[j].form == NULL && format[i + 1] != ' ')/* form diferent to c, s, i, d, %  and format +1 is diferent to space */
+			} /* form diferent to c, s, i, d, %  and format +1 is diferent to space */
+			if (format_list[j].form == NULL && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')
-				{
-					_putchar(format[i]);/* call _putchar function */
+				{/* call _putchar function */
+					_putchar(format[i]);
 					_putchar(format[i + 1]);
 					cont = cont + 2;
 				}
 				else
 					return (EXIT_FAILURE);
-			}
-			i++; /* increase after the special character, avoid printing */
+			} /* increase after the special character, avoid printing it */
+			i++;
 		}
 		else
 		{
