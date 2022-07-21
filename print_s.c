@@ -1,10 +1,9 @@
 #include "main.h"
  
 /**
- *print_c - print character
+ *print_s - print a string
  *@arg: argument list
- *
- *Return: always 1
+ *Return: always i
  */
 int print_s(va_list arg)
 {

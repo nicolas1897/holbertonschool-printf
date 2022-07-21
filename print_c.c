@@ -3,7 +3,6 @@
 /**
  *print_c - print character
  *@arg: argument list
- *
  *Return: always 1
  */
 int print_c(va_list arg)
