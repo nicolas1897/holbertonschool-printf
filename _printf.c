@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int cont = 0;
 	va_list arg;
 
-	formattype format_list[] = {
+	format_type format_list[] = {
 		{"c", print_c},
 		{"s", print_s},     
 		{"%", print_mod},

@@ -8,7 +8,7 @@
  *@arg: argument list given to the program
  *Return: amount of printed character (cont)
  */
-int analyzer(const char *format, format_list, va_list arg)
+int analyzer(const char *format, format_type format_list, va_list arg)
 {
 	int i = 0, j = 0, cont = 0, answ = 0;
 

@@ -16,7 +16,7 @@ typedef struct ft
 {
 	char *form;
 	int (*f)(va_list);
-} formattype;
+} format_type;
 
 /* prototype */
 int _printf(const char *format, ...);
