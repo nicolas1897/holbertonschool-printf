@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		};
 
 	if (format == NULL)
-		return (EXIT_FAILURE);
+		return (-1);
 
 	va_start(arg, format);
 	cont = analyzer(format, format_list, arg);

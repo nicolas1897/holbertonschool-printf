@@ -22,7 +22,7 @@ int analyzer(const char *format, format_type format_list[], va_list arg)
 				{/* call the required function */
 					answ = format_list[j].f(arg);
 					if (answ == -1)
-						return (EXIT_FAILURE);
+						return (-1);
 					cont += answ;
 					break;
 				}
@@ -36,7 +36,7 @@ int analyzer(const char *format, format_type format_list[], va_list arg)
 					cont = cont + 2;
 				}
 				else
-					return (EXIT_FAILURE);
+					return (-1);
 			} /* increase after the special character, avoid printing it */
 			i++;
 		}
