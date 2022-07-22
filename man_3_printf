@@ -94,7 +94,9 @@ int main(void)
      _printf("Character:[%c]\n", 'H');
 .LP
 }
+.LP
 $./_printf
+.LP
 Let's try to printf a simple sentence.
 .LP
 Length:[39, 39]
