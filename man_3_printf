@@ -4,7 +4,7 @@
 
 .B _printf
 
-- Our vertion of custom printf function
+Our vertion of custom printf function
 
 .SH SYNOPSIS
 #include <stdlib.h>
@@ -16,6 +16,67 @@ int _printf(const char *format, ...);
 int print_c(va_list arg);
 int print_s(va_list arg);                                          
 int print_d(va_list arg);
-
+int print_mod(va_list arg);
+int _putchar(char);
+int analyzer(const char *format, format_type format_list[], va_list arg);
 .LP
 .SH DESCRIPTION
+The _printf() function is the main one, has the list of the options and functions related to the format received. It calls also the analyzer() function that makes the conditions necesary to apply the format after the symbol '%'. It is used format to write the output depending on the control specified by the subsequent arguments converted. 
+.LP
+There are functions related to the format received, they are: the print_s() function print the string when format is the string 's', print_c() function print the character when format is string 'c', print_d() function print the number when the format is the string 'd' or 'i', print_mod() function print the symbol '%' when the format is the string '%'.
+.LP
+Inside the last four functions there is used the _putchar() function, and inside this one there is used the write() fuction that is used to print arguments.
+.LP
+It is used the va_list and not a variable for the arguments received, it is called the va_arg macro from the functions related to the format and on the main one it is called also the va_start and va_end.
+.LP
+.SH Format of the format string
+.LP
+Format string is a character string.
+.LP
+.SH Conversion specifiers
+.LP
+Are the characters that specifies the tyoe of conversion that is going to be used. The specifiers are:
+.B d, i
+Print a integer
+.B c
+Print a character
+.B s
+Print a string
+.B %
+Print the character '%'
+.SH RETURN VALUE
+.LP
+On successful return, return the number of characters printed, except for the null byte at the end of the string.
+.LP
+.SH EXAMPLE
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
+/**
+ * main - Entry point
+ * Return: Always 0
+ */
+int main(void)
+{
+    int len;   
+    unsigned int ui;
+    void *addr;
+    len = _printf("Let's try to printf a simple sentence.\n");
+    _printf("Length:[%d, %i]\n", len, len);
+     _printf("Negative:[%d]\n", -762534);
+     len = _printf("Percent:[%%]\n");
+     _printf("String:[%s]\n", "I am a string !");
+     _printf("Character:[%c]\n", 'H');
+}
+$.\printf
+Let's try to printf a simple sentence.
+Length:[39, 39]
+Negative:[-762534]
+Percent:[%]
+String:[I am a string !]
+Character:[H]
+$
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Written by Maria Echeverria, Nicolas Cuevas and Luiyi Hurtado
