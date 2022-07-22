@@ -5,13 +5,14 @@
 .B _printf
 
 Our version of a custom printf function
-
+.LP
 .SH SYNOPSIS
+.LP
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-
+.LP
 int _printf(const char *format, ...);
 int print_c(va_list arg);
 int print_s(va_list arg);                                          
@@ -21,6 +22,7 @@ int _putchar(char);
 int analyzer(const char *format, format_type format_list[], va_list arg);
 .LP
 .SH DESCRIPTION
+.LP
 The _printf() function is the main one, has the list of options and functions related to the format received. It also calls the analyzer() function that makes the necesary conditions to apply the format after the symbol '%'. It use format to write the output depending on the control specified by the subsequent arguments converted. 
 .LP
 There are functions related to the format received, they are: the print_s() function that print the string when format is the string 's', print_c() function that print the character when format is string 'c', print_d() function that print the number when the format is the string 'd' or 'i', print_mod() function that print the symbol '%' when the format is the string '%'.
@@ -36,14 +38,23 @@ Format string is a character string.
 .SH Conversion specifiers
 .LP
 The characters that specifie the type of conversion that is going to be used. The specifiers are:
+.LP
 .B d, i
+.LP
 Print a integer
+.LP
 .B c
+.LP
 Print a character
+.LP
 .B s
+.LP
 Print a string
+.LP
 .B %
+.LP
 Print the character '%'
+.LP
 .SH RETURN VALUE
 .LP
 On successful return, return the number of characters printed, except for the null byte at the end of the string.
@@ -60,36 +71,48 @@ On successful return, return the number of characters printed, except for the nu
  * main - Entry point
  * Return: Always 0
  */
+ .LP
 int main(void)
+.LP
 {
      int len;
-     .LP 
+.LP 
      unsigned int ui;
-     .LP
+.LP
      void *addr;
-     .LP
+.LP
      len = _printf("Let's try to printf a simple sentence.\n");
-     .LP
+.LP
      _printf("Length:[%d, %i]\n", len, len);
-     .LP
+.LP
      _printf("Negative:[%d]\n", -762534);
-     .LP
+.LP
      len = _printf("Percent:[%%]\n");
-     .LP
+.LP
      _printf("String:[%s]\n", "I am a string !");
-     .LP
+.LP
      _printf("Character:[%c]\n", 'H');
-     .LP
+.LP
 }
 $._printf
 Let's try to printf a simple sentence.
+.LP
 Length:[39, 39]
+.LP
 Negative:[-762534]
+.LP
 Percent:[%]
+.LP
 String:[I am a string !]
+.LP
 Character:[H]
+.LP
 $
+.LP
 .SH BUGS
+.LP
 No known bugs.
+.LP
 .SH AUTHOR
+.LP
 Written by Maria Echeverria, Nicolas Cuevas and Luiyi Hurtado
