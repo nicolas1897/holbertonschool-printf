@@ -17,11 +17,17 @@ Our version of a custom printf function
 #include <unistd.h>
 .LP
 int _printf(const char *format, ...);
+.LP
 int print_c(va_list arg);
+.LP
 int print_s(va_list arg);                                          
+.LP
 int print_d(va_list arg);
+.LP
 int print_mod(va_list arg);
+.LP
 int _putchar(char);
+.LP
 int analyzer(const char *format, format_type format_list[], va_list arg);
 .LP
 .SH DESCRIPTION
@@ -44,15 +50,19 @@ The characters that specifie the type of conversion that is going to be used. Th
 .LP
 .BR d,
 .BR i
+.LP
 Print a integer
 .LP
 .BR c
+.LP
 Print a character
 .LP
 .BR s
+.LP
 Print a string
 .LP
 .BR %
+.LP
 Print the character '%'
 .LP
 .SH RETURN VALUE
