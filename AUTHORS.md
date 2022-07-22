@@ -1,5 +1,7 @@
-Authors					Contact information
+Authors					
 
-*Maria Echeverria*			@holbertonschool.com
-*Luiyi Hurtado*				@holbertonschool.com
-*Nicolas Cuevas*			@holbertonschool.com	
+*Maria Echeverria*	---		@holbertonschool.com
+
+*Luiyi Hurtado*		---		@holbertonschool.com
+
+*Nicolas Cuevas*	---		@holbertonschool.com	
