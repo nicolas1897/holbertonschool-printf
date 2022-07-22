@@ -9,8 +9,11 @@ Our version of a custom printf function
 .SH SYNOPSIS
 .LP
 #include <stdlib.h>
+.LP
 #include <stdarg.h>
+.LP
 #include <stdio.h>
+.LP
 #include <unistd.h>
 .LP
 int _printf(const char *format, ...);
@@ -39,20 +42,17 @@ Format string is a character string.
 .LP
 The characters that specifie the type of conversion that is going to be used. The specifiers are:
 .LP
-.B d, i
-.LP
+.BR d,
+.BR i
 Print a integer
 .LP
-.B c
-.LP
+.BR c
 Print a character
 .LP
-.B s
-.LP
+.BR s
 Print a string
 .LP
-.B %
-.LP
+.BR %
 Print the character '%'
 .LP
 .SH RETURN VALUE
@@ -71,7 +71,7 @@ On successful return, return the number of characters printed, except for the nu
  * main - Entry point
  * Return: Always 0
  */
- .LP
+.LP
 int main(void)
 .LP
 {
@@ -94,7 +94,7 @@ int main(void)
      _printf("Character:[%c]\n", 'H');
 .LP
 }
-$._printf
+$./_printf
 Let's try to printf a simple sentence.
 .LP
 Length:[39, 39]
