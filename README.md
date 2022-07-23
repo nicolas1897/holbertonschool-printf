@@ -3,7 +3,7 @@
 
 ## Synopsis
 
-This function prints acording to a format the arguments received from the user.
+This function prints, acording to a format, the arguments received from the user.
 
 ## Description
 
@@ -50,17 +50,13 @@ int main(void)
 
 ## Testing
 
+```
 $./_printf
-
 Let's try to printf a simple sentence.
-
 Length:[39, 39]
-
 Negative:[-762534]
-
 Percent:[%]
-
 String:[I am a string !]
-
 Character:[H]
 $
+```
