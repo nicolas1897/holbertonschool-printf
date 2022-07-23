@@ -1,5 +1,5 @@
 ![alt text](https://github.com/nicolas1897/holbertonschool-printf/blob/main/_printf%20c18%20Diagram-General.drawio.png)
-![alt text](https://github.com/nicolas1897/holbertonschool-printf/blob/main/_printf%20c18%20Diagram-Union.drawio%20(1).png)
+
 # Project Printf
 ### Holberton School 
 
@@ -62,11 +62,7 @@ String:[I am a string !]
 Character:[H]
 $
 ```
-## AUTHOR
+## AUTHORS
 * Maria Echeverria
 * Luiyi Hurtado
 * Nicolas Cuevas
-
-![alt text](https://github.com/nicolas1897/holbertonscho
-ol-printf/blob/main/_printf%20c18%20Diagram-Union.drawio
-%20(1).png)
