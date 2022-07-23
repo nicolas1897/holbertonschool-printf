@@ -25,6 +25,7 @@ The _printf() function receive arguments and print them, when the function apply
 ## Example
 
 '''
+
 $ #include <limits.h>
 $ #include <stdio.h>
 $ #include "main.h"
@@ -55,7 +56,9 @@ $     _printf("String:[%s]\n", "I am a string !");
 $     
 $     _printf("Character:[%c]\n", 'H');
 $}
+
 '''
+
 $./_printf
 Let's try to printf a simple sentence.
 Length:[39, 39]
