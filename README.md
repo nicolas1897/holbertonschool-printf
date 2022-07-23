@@ -1,4 +1,5 @@
-# Project Printf ### Holberton School 
+# Project Printf
+### Holberton School 
 
 ## Synopsis
 
@@ -22,11 +23,12 @@ The _printf() function receive arguments and print them, when the function apply
 
 ## Example
 
-'''
+´´´
+#include <limits.h>
 
- #include <limits.h>
- #include <stdio.h>
- #include "main.h"
+#include <stdio.h>
+
+#include "main.h"
 
  /**
  * main - Entry point
@@ -36,6 +38,7 @@ The _printf() function receive arguments and print them, when the function apply
  int main(void)
 
  {
+
      int len;
 
      unsigned int ui;
@@ -54,12 +57,12 @@ The _printf() function receive arguments and print them, when the function apply
      
      _printf("Character:[%c]\n", 'H');
 }
-
-'''
+´´´
 
 ## Testing
 
 $./_printf
+
 Let's try to printf a simple sentence.
 
 Length:[39, 39]
