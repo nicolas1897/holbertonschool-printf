@@ -1,4 +1,4 @@
-![alt text](https://github.com/nicolas1897/holbertonschool-printf/blob/main/_printf%20c18%20Diagram-General.drawio.png)
+![alt text](https://github.com/nicolas1897/holbertonschool-printf/blob/main/flowchart.jpg)
 
 # Project Printf
 ### Holberton School 
